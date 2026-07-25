@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "vision-mate",
+    "slug": "vision-mate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "visionmate",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.visionmate.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "VisionMate needs camera access to recognize text, objects, and faces for accessibility.",
+        "NSMicrophoneUsageDescription": "VisionMate needs microphone access for voice commands.",
+        "NSLocationWhenInUseUsageDescription": "VisionMate needs location access to provide navigation assistance."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.visionmate.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "server",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "VisionMate needs camera access to recognize text, objects, and faces for accessibility.",
+          "microphonePermission": "VisionMate needs microphone access for voice commands."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "VisionMate needs location access to provide navigation assistance."
+        }
+      ],
+      "expo-router",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "82052f42-696c-4bdb-8af1-f45cda3cd3fe"
+      }
+    }
+  }
+}
